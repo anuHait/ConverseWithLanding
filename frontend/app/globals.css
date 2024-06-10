@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+.gradient-text {
+  background-image: linear-gradient(to right, #df8fef, #f77c7c61);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradient-text-gray {
+  background-image: linear-gradient(to right, rgb(183, 180, 180), rgb(83, 82, 82));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-pink {
+  background-image: linear-gradient(to bottom, #db8fea, #f88e8e61);
+  -webkit-background-clip: text;
+  color: transparent;
+}
