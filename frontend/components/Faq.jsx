@@ -30,14 +30,14 @@ function Faq() {
       <div className="w-[70%] lg:w-[55%] mr-8 font-custom2">
         <div className="w-full overflow-hidden flex flex-col gap-3">
           {faqItems.map((item, index) => (
-            <div key={index} className="flex flex-col  shadow bg-gray-800">
+            <div key={index} className="flex flex-col shadow bg-gray-800">
               <div className="flex flex-row gap-1">
-                <div className="w-1 bg-purple-600 h-16 p-2"></div>
+                <div className="w-1 bg-purple-600"></div>
                 <div
                   className="accordion-header p-3.5 cursor-pointer flex justify-between items-center flex-row font-medium w-full"
                   onClick={() => handleToggle(index)}
                 >
-                  <p className="flex flex-row gap-1 items-center text-gray-200">
+                  <p className="flex flex-row gap-1 items-center text-gray-200 text-sm md:text-md">
                     {item}
                   </p>
                   <span className="text-xl font-bold text-gray-200">
@@ -46,12 +46,12 @@ function Faq() {
                 </div>
               </div>
               {openIndex === index && (
-                <div className="flex flex-row gap-1">
-                <div className="w-1 bg-purple-600 h-16 p-2"></div>
-                <div className="accordion-body p-3.5">
-                  {faqAnswers[index]}
+                <div className="flex flex-col w-full">
+                  <div className="w-1 bg-purple-600"></div>
+                  <div className="accordion-body p-3.5 text-sm md:text-md bg-gray-700 text-gray-200">
+                    {faqAnswers[index]}
+                  </div>
                 </div>
-              </div>
               )}
             </div>
           ))}
