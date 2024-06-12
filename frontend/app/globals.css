@@ -45,8 +45,22 @@ body {
   color: transparent;
 }
 
+.gradient-text-gray2 {
+  background-image: linear-gradient(to right, rgb(83, 82, 82),rgb(183, 180, 180) );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .gradient-text-pink {
   background-image: linear-gradient(to bottom, #db8fea, #f88e8e61);
   -webkit-background-clip: text;
   color: transparent;
 }
+
+
+.gradient-text-red {
+  background-image: linear-gradient(to right,#f9727261 , #fd9ecd);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+

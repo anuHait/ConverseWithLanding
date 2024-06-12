@@ -27,7 +27,10 @@ function Faq() {
 
   return (
     <div className="flex flex-col items-center justify-center bg-black gap-10 pt-20 pb-20">
-      <div className="w-[70%] lg:w-[55%] mr-8 font-custom2">
+    <h1 className="gradient-text-gray text-[26px] md:text-[34px] lg:text-[48px] font-medium font-['Inter'] ">
+         FAQs
+        </h1>
+      <div className="w-[70%] lg:w-[55%]  ">
         <div className="w-full overflow-hidden flex flex-col gap-3">
           {faqItems.map((item, index) => (
             <div key={index} className="flex flex-col shadow bg-gray-800">
@@ -37,10 +40,10 @@ function Faq() {
                   className="accordion-header p-3.5 cursor-pointer flex justify-between items-center flex-row font-medium w-full"
                   onClick={() => handleToggle(index)}
                 >
-                  <p className="flex flex-row gap-1 items-center text-gray-200 text-sm md:text-md">
+                  <p className="flex flex-row gap-1 items-center text-gray-200 text-xs md:text-md">
                     {item}
                   </p>
-                  <span className="text-xl font-bold text-gray-200">
+                  <span className="text-md md:text-xl font-bold text-gray-200">
                     {openIndex === index ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </span>
                 </div>

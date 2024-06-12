@@ -5,6 +5,9 @@ import Genre from "@/components/Genres";
 import GetOnBoard from "@/components/GetOnBoard";
 import CreatePluggin from "@/components/CreatePluggin";
 import Faq from "@/components/Faq";
+import Steps from "@/components/Steps";
+import AppFooter from "@/components/AppFooter";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -14,7 +17,10 @@ export default function Home() {
    
     <CreatePluggin />
     <GetOnBoard />
+    <Steps />
     <Faq />
+    <AppFooter />
+    <Footer />
     </>
   );
 }
