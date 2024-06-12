@@ -8,9 +8,11 @@ import Faq from "@/components/Faq";
 import Steps from "@/components/Steps";
 import AppFooter from "@/components/AppFooter";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
+    <Navbar />
     <Landing />
     <Services />
     <Genre/>

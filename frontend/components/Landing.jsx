@@ -5,7 +5,7 @@ import LandingCard from "./LandingCard";
 function Landing() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 gap-10">
-      <div className="flex flex-col justify-start items-center gap-4 pt-10">
+      <div className="flex flex-col justify-start items-center gap-4 pt-20">
         <div className=" flex flex-col items-center justify-center text-center gap-2">
           <span className="gradient-text text-[30px] md:text-[40px] lg:text-[56px] font-medium font-['Inter'] ">
             CONVERSE WITH

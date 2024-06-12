@@ -6,7 +6,7 @@ function Footer() {
       <div className="h-fit w-[85%] flex flex-col gap-5 bg-gradient-to-b from-gray-800 to-slate-900 mt-10 rounded-t-[40px] shadow-md text-white p-10">
         <div className="flex flex-row justify-between">
           <h1>CONVERSE WITH</h1>
-          <div className="flex flex-row gap-3">
+          <div className="hidden md:flex flex-row gap-3">
             <p>About us</p>
             <p>Blogs</p>
             <p>Contact Us</p>
