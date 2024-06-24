@@ -25,7 +25,7 @@ function Landing() {
   
       if (transcript) {
         try {
-          const response = await axios.post("http://3.108.21.108/cw_web_tts", { text: transcript }, { responseType: 'arraybuffer' });
+          const response = await axios.post("https://nikaru.in/cw_web_tts", { text: transcript }, { responseType: 'arraybuffer' });
           console.log("Response data:", response.data);
   
           const blob = new Blob([response.data], { type: 'audio/wav' });

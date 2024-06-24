@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-slate-900 w-full  flex flex-col items-center justify-center  ">
+    <div className="bg-black w-full  flex flex-col items-center justify-center  ">
       <div className="h-fit w-[85%] flex flex-col gap-5 bg-gradient-to-b from-gray-800 to-slate-900 mt-10 rounded-t-[40px] shadow-md text-white p-10">
         <div className="flex flex-col gap-2 md:flex-row justify-between">
           <h1>CONVERSE WITH</h1>
