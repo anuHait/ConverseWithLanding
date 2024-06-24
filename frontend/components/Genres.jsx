@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 const Genres = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -21,12 +22,12 @@ const Genres = () => {
       <div className="w-full h-60 hidden md:block mt-20">
         <Swiper
          
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination,Autoplay]}
           spaceBetween={50}
           slidesPerView={4}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          loop={true}
+          // pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
+          autoplay={true}
 
         >
           <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[30px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
@@ -47,17 +48,26 @@ const Genres = () => {
           <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[36px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
             Hello
           </SwiperSlide>
+          <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[36px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
+            Hello
+          </SwiperSlide>
+          <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[36px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
+            Hello
+          </SwiperSlide>
+          <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[36px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
+            Hello
+          </SwiperSlide>
+          
         </Swiper>
       </div>
       {/* Swiper Mobile*/}
       <div className="w-full h-60 block md:hidden">
         <Swiper
           
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={2}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+        modules={[Navigation, Pagination,Autoplay]}
+        spaceBetween={50}
+        slidesPerView={2}
+        autoplay={true}
           className="w-full"
         >
           <SwiperSlide className="h-20 w-fit py-4 px-2 text-[13px] bg-slate-800 text-center rounded-[36px] font-semibold shadow-inner shadow-purple-600 m-1.5 text-white ">

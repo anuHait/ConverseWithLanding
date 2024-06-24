@@ -23,10 +23,10 @@ function Steps() {
         {/*Box 1 */}
         <div className="w-[85%] md:w-[50%] lg:w-[40%] h-80 p-8 flex flex-col items-start justify-start rounded-[46px]  bg-gradient-to-r from-slate-800 from-5%  to-slate-900 to-90% text-white">
           <p className="font-semibold ">List and Board</p>
-          <p className="font-extralight text-sm md:text-md">
+          <p className="font-normal text-sm md:text-md">
             Switch between list and board layout to
           </p>
-          <p className="font-extralight text-sm md:text-md">
+          <p className="font-normal text-sm md:text-md">
             view work from any angle
           </p>
         </div>
@@ -38,12 +38,12 @@ function Steps() {
   />
   <div className="flex flex-col">
     <p className="font-semibold">Make it Yours</p>
-    <p className="font-extralight text-sm md:text-md">Quickly apply filters to</p>
-    <p className="font-extralight text-sm md:text-md">refine your issue lists and create custom</p>
-    <p className="font-extralight text-sm md:text-md">views.</p>
+    <p className="font-normal text-sm md:text-md ">Quickly apply filters to</p>
+    <p className="font-normal text-sm md:text-md ">refine your issue lists and create custom</p>
+    <p className="font-normal text-sm md:text-md ">views.</p>
   </div>
   <div className="flex items-end justify-end w-[90%] mt-8">
-    <p className="bg-fuchsia-600 p-3 font-semibold rounded-tl-xl rounded-tr-xl rounded-bl-xl text-xs lg:text-sm  text-gray-200 shadow-inherit">
+    <p className="bg-fuchsia-600 p-3 font-semibold rounded-tl-xl rounded-tr-xl rounded-bl-xl text-xs lg:text-sm  text-white shadow-inherit">
       Chat with me to clear your doubts
     </p>
   </div>
