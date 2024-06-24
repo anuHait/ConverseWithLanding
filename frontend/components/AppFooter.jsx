@@ -2,7 +2,7 @@ import React from 'react'
 import { SiGoogleplay } from "react-icons/si";
 function AppFooter() {
   return (
-    <div className='bg-slate-900 w-full h-48 flex flex-col items-center justify-center pb-20 gap-5'>
+    <div className='bg-banner  bg-cover	 flex flex-col items-center justify-center p-4 gap-5'>
       <h1 className="text-gray-500 text-[22px] md:text-[24px] lg:text-[46px] font-medium font-['Inter'] text-center">Converse Now!</h1>
       <div className='flex flex-row gap-2'>
       <button className="bg-gradient-to-r rounded-[24px] flex flex-row gap-1 items-center justify-center from-[#D446F1] to-fuchsia-700 text-gray-200 font-normal text-xs lg:text-md py-1 px-2 ">Sign up for free</button>
