@@ -27,7 +27,7 @@ const Genres = () => {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           loop={true}
-          
+
         >
           <SwiperSlide className="h-20 w-fit py-6 px-2 bg-slate-800 text-center rounded-[30px] font-semibold shadow-inner shadow-purple-600 mb-1 text-white ">
             Fiction

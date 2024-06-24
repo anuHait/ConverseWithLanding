@@ -16,7 +16,6 @@ export default function Home() {
     <Landing />
     <Services />
     <Genre/>
-   
     <CreatePluggin />
     <GetOnBoard />
     <Steps />

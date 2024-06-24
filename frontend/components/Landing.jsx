@@ -42,7 +42,7 @@ function Landing() {
   };
   
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 gap-10">
+    <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-950 gap-10 bg-cover scroll-smooth	">
       <div className="flex flex-col justify-start items-center gap-4 pt-20">
         <div className="flex flex-col items-center justify-center text-center gap-2">
           <span className="gradient-text text-[30px] md:text-[40px] lg:text-[56px] font-medium font-['Inter'] ">
@@ -57,19 +57,34 @@ function Landing() {
         </div>
         {/* Orb (Lottie) and Arrow */}
         <div className="relative flex items-center justify-center">
-          <div  onClick={handleOnRecord}>
+          <div  onClick={handleOnRecord} className="hidden md:block" >
             <Lottie
               loop
               animationData={orb}
               play
-              style={{ width: 300, height : 300 }}
+              style={{ width: 300, height : 300 }} 
             />
           </div>
-          <div className="absolute top-4 left-60 flex w-full items-start space-x-2">
-            <div className="h-full aspect-square transform -rotate-12">
-              <Image src="/assets/arrow.png" width={120} height={110} className="object-cover" alt="image"/>
+          <div  onClick={handleOnRecord} className="block md:hidden" >
+            <Lottie
+              loop
+              animationData={orb}
+              play
+              style={{ width: 240, height : 240 }} 
+            />
+          </div>
+          <div className="absolute top-4 left-60 hidden md:flex w-[80%] lg:w-[85%] items-start ">
+            <div className=" aspect-square transform -rotate-12">
+              <Image src="/assets/arrow.png" width={110} height={110} className="object-cover" alt="image"/>
             </div>
-           Click here
+           <p className="text-md text-white font-medium">Click here</p>
+          </div>
+
+          <div className="absolute top-4 left-44 flex md:hidden w-[55%] items-start ">
+            <div className=" aspect-square transform -rotate-12">
+              <Image src="/assets/arrow.png" width={80} height={80} className="object-cover" alt="image"/>
+            </div>
+           <p className="text-sm md:text-md text-white font-medium">Click here</p>
           </div>
         </div>
         {/* Button to start/stop recording */}
@@ -83,7 +98,8 @@ function Landing() {
       <div className="flex flex-col items-center justify-center mt-36">
         <p className="text-center text-stone-50 text-lg md:text-2xl lg:text-3xl font-medium font-['Inter']">Experience the New way of learning!</p>
         {/* Box mapping */}
-        <div className="flex flex-wrap item-center gap-6 md:gap-4 justify-center w-[75%] md:w-[60%] mt-12 md:mt-16 mb-28">
+        <div className="flex flex-wrap item-center gap-6 md:gap-4 justify-center w-[75%] md:w-[60%] mt-12 md:mt-16 mb-24 "
+        data-aos="zoom-in">
           <LandingCard />
           <LandingCard />
           <LandingCard />

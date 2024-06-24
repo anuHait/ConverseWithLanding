@@ -2,7 +2,7 @@ import React from "react";
 
 function Services() {
   return (
-    <div className=" flex flex-col items-center justify-center bg-gray-900 gap-10">
+    <div className=" flex flex-col items-center justify-center bg-gradient-background bg-black mix-blend-normal gap-10">
       <div className="flex flex-col justify-start items-center gap-4 pt-10">
         <span className="gradient-text-pink text-[28px] md:text-[38px] lg:text-[52px] font-medium font-['Inter'] ">
           JOIN US
