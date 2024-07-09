@@ -1,13 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
+  const contentRefs = useRef([]);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    if (openIndex !== null) {
+      contentRefs.current[openIndex].style.maxHeight = contentRefs.current[openIndex].scrollHeight + "px";
+    }
+  }, [openIndex]);
 
   const faqItems = [
     "Do you offer freelancers?",
@@ -27,10 +34,10 @@ function Faq() {
 
   return (
     <div className="flex flex-col items-center justify-center bg-black gap-10 pt-20 pb-20">
-    <h1 className="gradient-text-gray text-[26px] md:text-[34px] lg:text-[48px] font-medium font-['Inter'] ">
-         FAQs
-        </h1>
-      <div className="w-[70%] lg:w-[55%]  ">
+      <h1 className="gradient-text-gray text-[26px] md:text-[34px] lg:text-[48px] font-medium font-['Inter'] ">
+        FAQs
+      </h1>
+      <div className="w-[70%] lg:w-[55%]">
         <div className="w-full overflow-hidden flex flex-col gap-3">
           {faqItems.map((item, index) => (
             <div key={index} className="flex flex-col shadow bg-gray-800">
@@ -48,14 +55,16 @@ function Faq() {
                   </span>
                 </div>
               </div>
-              {openIndex === index && (
-                <div className="flex flex-col w-full">
-                  <div className="w-1 bg-purple-600"></div>
-                  <div className="accordion-body p-3.5 text-sm md:text-md bg-gray-700 text-gray-200">
-                    {faqAnswers[index]}
-                  </div>
+              <div
+                ref={(el) => (contentRefs.current[index] = el)}
+                className={`accordion-body-wrapper ${openIndex === index ? "open" : ""}`}
+                style={{ maxHeight: openIndex === index ? `${contentRefs.current[index]?.scrollHeight}px` : "0" }}
+              >
+                <div className="w-1 bg-purple-600"></div>
+                <div className="accordion-body p-3.5 text-sm md:text-md bg-gray-700 text-gray-200">
+                  {faqAnswers[index]}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

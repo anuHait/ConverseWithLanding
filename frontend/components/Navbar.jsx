@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-
+import Link from 'next/navigation'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,10 +13,10 @@ function Navbar() {
         <div className='w-[70%] flex flex-row items-center justify-between'>
           <div className="flex flex-row gap-5">
             <p>About us</p>
-            <p>Blogs</p>
-            <p>Contact Us</p>
-            <p>Plugins</p>
-            <p>Nikaru</p>
+            <Link href="/blog"><p>Blogs</p></Link>
+            <Link href="/contactus"><p>Contact Us</p></Link>
+            <Link href="/plugins"><p>Plugins</p></Link>
+            <Link href="/nikaru"><p>Nikaru</p></Link>
           </div>
         </div>
         <div className="flex flex-row gap-3 items-center">
